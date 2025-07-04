@@ -7,6 +7,7 @@ import Image from 'next/image';
 import { format } from 'date-fns';
 import NavigationBar from '../../components/NavigationBar';
 import Footer from '../../components/Footer';
+import styles from '../../styles/blog.module.css';
 
 export async function getStaticPaths() {
   const blogDir = path.join(process.cwd(), 'blog');
@@ -151,7 +152,7 @@ export default function BlogPost({ post, relatedPosts = [] }) {
           </article>
 
           {/* Main Content */}
-          <div className="prose prose-lg max-w-none prose-invert">
+          <div className={`prose prose-lg max-w-none prose-invert ${styles.prose}`}>
             {post?.contentHtml ? (
               <div 
                 className="text-gray-200 leading-relaxed"
@@ -239,96 +240,6 @@ export default function BlogPost({ post, relatedPosts = [] }) {
       </main>
 
       <Footer />
-      
-      <style jsx global>{`
-        /* Medium-style typography */
-        .prose {
-          font-size: 1.125rem;
-          line-height: 1.75;
-        }
-        
-        .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
-          font-weight: 700;
-          line-height: 1.25;
-          margin-top: 2rem;
-          margin-bottom: 1rem;
-          color: #ffffff;
-        }
-        
-        .prose h1 {
-          font-size: 2.25rem;
-        }
-        
-        .prose h2 {
-          font-size: 1.875rem;
-        }
-        
-        .prose h3 {
-          font-size: 1.5rem;
-        }
-        
-        .prose p {
-          margin-bottom: 1.5rem;
-          color: #e5e7eb;
-        }
-        
-        .prose ul, .prose ol {
-          margin-bottom: 1.5rem;
-          padding-left: 1.5rem;
-        }
-        
-        .prose li {
-          margin-bottom: 0.5rem;
-          color: #e5e7eb;
-        }
-        
-        .prose blockquote {
-          border-left: 4px solid #4b5563;
-          padding-left: 1.5rem;
-          margin: 2rem 0;
-          font-style: italic;
-          color: #9ca3af;
-        }
-        
-        .prose code {
-          background-color: #374151;
-          padding: 0.25rem 0.5rem;
-          border-radius: 0.375rem;
-          font-size: 0.875rem;
-          color: #f87171;
-        }
-        
-        .prose pre {
-          background-color: #1f2937;
-          color: #f9fafb;
-          padding: 1.5rem;
-          border-radius: 0.75rem;
-          overflow-x: auto;
-          margin: 2rem 0;
-        }
-        
-        .prose pre code {
-          background-color: transparent;
-          padding: 0;
-          color: inherit;
-        }
-        
-        .prose img {
-          border-radius: 0.75rem;
-          margin: 2rem 0;
-        }
-        
-        .prose a {
-          color: #60a5fa;
-          text-decoration: underline;
-          text-decoration-thickness: 1px;
-          text-underline-offset: 2px;
-        }
-        
-        .prose a:hover {
-          color: #3b82f6;
-        }
-      `}</style>
     </div>
   );
-} 
+}
