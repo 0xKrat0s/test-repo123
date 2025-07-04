@@ -44,7 +44,7 @@ const itemVariants = {
   }
 };
 
-export default function BlogPostClient({ post, relatedPosts = [], breadcrumbJsonLd, blogPostingJsonLd }) {
+const BlogPostClient = ({ post, relatedPosts = [], breadcrumbJsonLd, blogPostingJsonLd }) => {
   const [isTableOfContentsVisible, setIsTableOfContentsVisible] = useState(false);
   const [activeHeading, setActiveHeading] = useState('');
   const [readingTime, setReadingTime] = useState(0);
@@ -157,7 +157,7 @@ export default function BlogPostClient({ post, relatedPosts = [], breadcrumbJson
   };
 
   return (
-    <main className={`min-h-screen bg-white text-black font-sans overflow-x-hidden relative ${styles.prose}`} style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+    <main className={`min-h-screen bg-white text-black font-sans overflow-x-hidden relative ${styles.container} ${styles.prose}`} style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }}
@@ -480,3 +480,5 @@ export default function BlogPostClient({ post, relatedPosts = [], breadcrumbJson
     </main>
   );
 }
+
+export default BlogPostClient;

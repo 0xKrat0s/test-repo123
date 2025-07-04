@@ -151,3 +151,14 @@ h2 small::after {
   font-size: 1.125rem;
   line-height: 1.75;
 }
+
+/* Global styles */
+html, body {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
+}

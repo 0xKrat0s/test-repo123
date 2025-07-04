@@ -1,11 +1,9 @@
-html, body, * {
+.container {
   scrollbar-width: none;
   -ms-overflow-style: none;
 }
 
-html::-webkit-scrollbar,
-body::-webkit-scrollbar,
-*::-webkit-scrollbar {
+.container::-webkit-scrollbar {
   display: none;
 }
 
