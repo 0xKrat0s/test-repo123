@@ -135,3 +135,13 @@ h2 small::after {
 .animate-float {
   animation: float 6s ease-in-out infinite;
 }
+
+/* Add your global styles here */
+/* For example: */
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
