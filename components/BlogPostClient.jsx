@@ -20,7 +20,7 @@ import {
   Heart,
   MessageCircle
 } from 'lucide-react';
-import styles from '../styles/blogpost.module.css';
+import styles from '../styles/BlogPost.module.css';
 
 // Animation variants
 const containerVariants = {
@@ -157,7 +157,7 @@ export default function BlogPostClient({ post, relatedPosts = [], breadcrumbJson
   };
 
   return (
-    <main className="min-h-screen bg-white text-black font-sans overflow-x-hidden relative" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
+    <main className={`min-h-screen bg-white text-black font-sans overflow-x-hidden relative ${styles.prose}`} style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: breadcrumbJsonLd }}

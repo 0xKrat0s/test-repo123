@@ -77,6 +77,17 @@ html::-webkit-scrollbar, body::-webkit-scrollbar {
   display: none;
 }
 
+html, body, * {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+*::-webkit-scrollbar {
+  display: none;
+}
+
 .nav-primary .sectionlink {
   @apply relative
 }
@@ -136,12 +147,7 @@ h2 small::after {
   animation: float 6s ease-in-out infinite;
 }
 
-/* Add your global styles here */
-/* For example: */
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+.prose {
+  font-size: 1.125rem;
+  line-height: 1.75;
 }

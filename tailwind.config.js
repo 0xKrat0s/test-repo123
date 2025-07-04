@@ -1,30 +1,38 @@
-/** @type {import('tailwindcss').Config} */
-const config = {
+module.exports = {
+  darkMode: "class",
   content: [
-    './pages/**/*.{js,ts,jsx,tsx}',
-    './components/**/*.{js,ts,jsx,tsx}',
+    "./pages/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-      colors: {
-        primary: '#0071C5',
-      },
-      fontFamily: {
-        sans: ['Manrope', 'sans-serif'],
-      },
       animation: {
-        'fade-in': 'fade-in 1s cubic-bezier(0.4,0,0.2,1) both',
-        'float': 'float 6s ease-in-out infinite',
+        marquee: "marquee 25s linear infinite",
       },
       keyframes: {
-        'fade-in': {
-          'from': { opacity: 0, transform: 'translateY(32px)' },
-          'to': { opacity: 1, transform: 'translateY(0)' }
+        marquee: {
+          "0%": { transform: "translateX(0%)" },
+          "100%": { transform: "translateX(-100%)" },
         },
-        'float': {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-20px)' }
-        }
+      },
+      fontFamily: {
+        manrope: ["Manrope", "sans-serif"],
+        sans: ["Manrope", "sans-serif"],
+      },
+      colors: {
+        primary: {
+          DEFAULT: "#2563eb",
+          50: "#eff6ff",
+          100: "#dbeafe",
+          200: "#bfdbfe",
+          300: "#93c5fd",
+          400: "#60a5fa",
+          500: "#3b82f6",
+          600: "#2563eb",
+          700: "#1d4ed8",
+          800: "#1e40af",
+          900: "#1e3a8a",
+        },
       },
       backgroundImage: {
         "hero-pattern": "url('/bg-abstract.png')",
@@ -42,14 +50,6 @@ const config = {
     extend: {
       fontFamily: ["hover", "focus"],
     },
-  },
-  plugins: [],
-  corePlugins: {
-    fontFamily: true,
-  },
-};
-
-module.exports = config;
   },
   plugins: [],
   corePlugins: {
