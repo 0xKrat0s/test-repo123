@@ -5,7 +5,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  trailingSlash: true, // Optional but helps with routing on GitHub Pages
+  trailingSlash: true,
+
+  // 👇 ADD THESE TWO LINES
+  basePath: '/test-repo123',
+  assetPrefix: '/test-repo123/',
 };
 
 module.exports = nextConfig;
