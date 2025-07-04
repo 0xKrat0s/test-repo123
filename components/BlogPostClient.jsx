@@ -20,6 +20,7 @@ import {
   Heart,
   MessageCircle
 } from 'lucide-react';
+import styles from '../styles/blogpost.module.css';
 
 // Animation variants
 const containerVariants = {
@@ -476,115 +477,6 @@ export default function BlogPostClient({ post, relatedPosts = [], breadcrumbJson
           </div>
         </motion.div>
       </div>
-      
-      <style jsx global>{`
-        html {
-          scrollbar-width: none;
-          -ms-overflow-style: none;
-        }
-        html::-webkit-scrollbar {
-          display: none;
-        }
-        body {
-          scrollbar-width: none;
-          -ms-overflow-style: none;
-        }
-        body::-webkit-scrollbar {
-          display: none;
-        }
-        * {
-          scrollbar-width: none;
-          -ms-overflow-style: none;
-        }
-        *::-webkit-scrollbar {
-          display: none;
-        }
-        
-        /* Medium-style typography */
-        .prose {
-          font-size: 1.125rem;
-          line-height: 1.75;
-        }
-        
-        .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
-          font-weight: 700;
-          line-height: 1.25;
-          margin-top: 2rem;
-          margin-bottom: 1rem;
-        }
-        
-        .prose h1 {
-          font-size: 2.25rem;
-        }
-        
-        .prose h2 {
-          font-size: 1.875rem;
-        }
-        
-        .prose h3 {
-          font-size: 1.5rem;
-        }
-        
-        .prose p {
-          margin-bottom: 1.5rem;
-        }
-        
-        .prose ul, .prose ol {
-          margin-bottom: 1.5rem;
-          padding-left: 1.5rem;
-        }
-        
-        .prose li {
-          margin-bottom: 0.5rem;
-        }
-        
-        .prose blockquote {
-          border-left: 4px solid #e5e7eb;
-          padding-left: 1.5rem;
-          margin: 2rem 0;
-          font-style: italic;
-          color: #6b7280;
-        }
-        
-        .prose code {
-          background-color: #f3f4f6;
-          padding: 0.25rem 0.5rem;
-          border-radius: 0.375rem;
-          font-size: 0.875rem;
-          color: #dc2626;
-        }
-        
-        .prose pre {
-          background-color: #1f2937;
-          color: #f9fafb;
-          padding: 1.5rem;
-          border-radius: 0.75rem;
-          overflow-x: auto;
-          margin: 2rem 0;
-        }
-        
-        .prose pre code {
-          background-color: transparent;
-          padding: 0;
-          color: inherit;
-        }
-        
-        .prose img {
-          border-radius: 0.75rem;
-          margin: 2rem 0;
-        }
-        
-        .prose a {
-          color: #2563eb;
-          text-decoration: underline;
-          text-decoration-thickness: 1px;
-          text-underline-offset: 2px;
-        }
-        
-        .prose a:hover {
-          color: #1d4ed8;
-        }
-      `}</style>
     </main>
   );
-} 
+}
